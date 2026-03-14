@@ -1,4 +1,8 @@
 package com.dpreble.flytimer
 
-class FlyTimerApp {
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class FlyTimerApp: Application() {
 }

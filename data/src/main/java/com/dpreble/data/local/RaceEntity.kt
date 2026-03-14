@@ -1,0 +1,13 @@
+package com.dpreble.data.local
+
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "races")
+data class RaceEntity(
+    @PrimaryKey(autoGenerate = true)
+    val id: Long = 0,
+    @ColumnInfo(name = "race_name")
+    val raceName: String
+)
