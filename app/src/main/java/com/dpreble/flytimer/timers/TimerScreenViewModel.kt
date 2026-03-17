@@ -2,11 +2,11 @@ package com.dpreble.flytimer.timers
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dpreble.domain.model.Athlete
-import com.dpreble.domain.model.Race
-import com.dpreble.domain.repository.AthletesRepository
-import com.dpreble.domain.repository.RacesRepository
-import com.dpreble.domain.repository.TimesRepository
+import com.dpreble.domain.athlete.models.Athlete
+import com.dpreble.domain.race.models.Race
+import com.dpreble.domain.athlete.repository.AthletesRepository
+import com.dpreble.domain.race.repository.RacesRepository
+import com.dpreble.domain.times.repository.TimesRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.Job

@@ -2,8 +2,8 @@ package com.dpreble.flytimer.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dpreble.domain.model.Race
-import com.dpreble.domain.repository.RacesRepository
+import com.dpreble.domain.race.models.Race
+import com.dpreble.domain.race.repository.RacesRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow

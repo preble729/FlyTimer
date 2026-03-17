@@ -2,8 +2,8 @@ package com.dpreble.flytimer.athletes
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dpreble.domain.model.Athlete
-import com.dpreble.domain.repository.AthletesRepository
+import com.dpreble.domain.athlete.models.Athlete
+import com.dpreble.domain.athlete.repository.AthletesRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow

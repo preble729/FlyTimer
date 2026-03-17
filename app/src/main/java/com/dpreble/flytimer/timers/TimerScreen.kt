@@ -34,6 +34,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.dpreble.domain.athlete.models.Athlete
+import com.dpreble.domain.race.models.Race
 import com.dpreble.flytimer.ui.theme.FlyTimerTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -279,8 +281,8 @@ private fun TimerScreenContentPreview() {
     FlyTimerTheme {
         TimerScreenContent(
             uiState = TimerScreenUiState(
-                athletes = listOf(com.dpreble.domain.model.Athlete(id = 1, name = "Jordan Wells")),
-                races = listOf(com.dpreble.domain.model.Race(id = 1, raceName = "20m Fly")),
+                athletes = listOf(Athlete(id = 1, name = "Jordan Wells")),
+                races = listOf(Race(id = 1, raceName = "20m Fly")),
                 selectedAthleteId = 1,
                 selectedRaceId = 1,
                 isRunning = true,

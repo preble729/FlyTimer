@@ -1,14 +1,14 @@
 package com.dpreble.di
 
-import com.dpreble.data.local.AthleteDao
-import com.dpreble.data.local.RaceDao
-import com.dpreble.data.local.TimeDao
-import com.dpreble.data.repository.AthletesRepositoryImpl
-import com.dpreble.data.repository.RacesRepositoryImpl
-import com.dpreble.data.repository.TimesRepositoryImpl
-import com.dpreble.domain.repository.AthletesRepository
-import com.dpreble.domain.repository.RacesRepository
-import com.dpreble.domain.repository.TimesRepository
+import com.dpreble.data.athlete.local.AthleteDao
+import com.dpreble.data.athlete.repository.AthletesRepositoryImpl
+import com.dpreble.data.race.local.RaceDao
+import com.dpreble.data.race.repository.RacesRepositoryImpl
+import com.dpreble.data.times.local.TimeDao
+import com.dpreble.data.times.repository.TimesRepositoryImpl
+import com.dpreble.domain.athlete.repository.AthletesRepository
+import com.dpreble.domain.race.repository.RacesRepository
+import com.dpreble.domain.times.repository.TimesRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

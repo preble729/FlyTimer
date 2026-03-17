@@ -2,10 +2,10 @@ package com.dpreble.di
 
 import android.content.Context
 import androidx.room.Room
-import com.dpreble.data.local.AthleteDao
-import com.dpreble.data.local.FlyTimerDatabase
-import com.dpreble.data.local.RaceDao
-import com.dpreble.data.local.TimeDao
+import com.dpreble.data.FlyTimerDatabase
+import com.dpreble.data.athlete.local.AthleteDao
+import com.dpreble.data.race.local.RaceDao
+import com.dpreble.data.times.local.TimeDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

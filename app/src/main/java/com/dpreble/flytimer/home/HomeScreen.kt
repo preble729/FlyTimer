@@ -27,7 +27,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.dpreble.domain.model.RecentRace
+import com.dpreble.domain.race.models.RecentRace
 import com.dpreble.flytimer.ui.theme.FlyTimerTheme
 
 data class HomeStat(
