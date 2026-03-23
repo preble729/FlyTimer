@@ -62,4 +62,7 @@ FlyTimer is an Android app for recording flying sprint times, organizing athlete
 
 ## Upcoming Features
 
-- Add ideas here
+- Add multi lap set ups
+- Add relay setups
+- Hook up to .NET backend for remote backup
+- Add separate teams and users
