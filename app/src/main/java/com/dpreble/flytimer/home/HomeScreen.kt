@@ -36,7 +36,8 @@ data class HomeStat(
 )
 
 @Composable
-fun HomeScreen(viewModel: HomeViewModel = hiltViewModel()) {
+fun HomeScreen() {
+    val viewModel: HomeViewModel = hiltViewModel()
     val uiState by viewModel.uiState.collectAsState()
 
     HomeScreenContent(uiState = uiState)

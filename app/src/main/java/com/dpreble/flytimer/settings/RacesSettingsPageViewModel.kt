@@ -41,7 +41,7 @@ class RacesSettingsPageViewModel @Inject constructor(
         if (name.isEmpty()) return
 
         viewModelScope.launch {
-            racesRepository.addRace(name)
+            racesRepository.addRace(name, 1)
             _uiState.update { it.copy(raceNameInput = "") }
         }
     }

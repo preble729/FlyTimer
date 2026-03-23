@@ -5,6 +5,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface RacesRepository {
     fun observeRaces(): Flow<List<Race>>
-    suspend fun addRace(name: String): Long
+    suspend fun addRace(name: String, lapsPerAthlete: Int): Long
     suspend fun removeRace(id: Long)
 }

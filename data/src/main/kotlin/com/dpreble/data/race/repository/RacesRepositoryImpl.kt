@@ -15,14 +15,15 @@ class RacesRepositoryImpl(
             races.map { race ->
                 Race(
                     id = race.id,
-                    raceName = race.raceName
+                    raceName = race.raceName,
+                    lapsPerAthlete = emptyList()
                 )
             }
         }
     }
 
-    override suspend fun addRace(name: String): Long {
-        return raceDao.insert(RaceEntity(raceName = name))
+    override suspend fun addRace(name: String, lapsPerAthlete: Int): Long {
+        return raceDao.insert(RaceEntity(raceName = name, lapsPerAthlete = lapsPerAthlete))
     }
 
     override suspend fun removeRace(id: Long) {

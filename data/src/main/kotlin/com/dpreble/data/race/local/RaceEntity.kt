@@ -9,5 +9,7 @@ data class RaceEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
     @ColumnInfo(name = "race_name")
-    val raceName: String
+    val raceName: String,
+    @ColumnInfo(name = "laps_per_athlete")
+    val lapsPerAthlete: Int
 )
