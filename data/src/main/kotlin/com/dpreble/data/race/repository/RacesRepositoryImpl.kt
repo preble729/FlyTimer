@@ -16,7 +16,7 @@ class RacesRepositoryImpl(
                 Race(
                     id = race.id,
                     raceName = race.raceName,
-                    lapsPerAthlete = emptyList()
+                    lapsPerAthlete = 1
                 )
             }
         }

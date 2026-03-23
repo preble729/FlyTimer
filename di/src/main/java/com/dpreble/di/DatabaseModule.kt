@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.dpreble.data.FlyTimerDatabase
 import com.dpreble.data.athlete.local.AthleteDao
 import com.dpreble.data.race.local.RaceDao
+import com.dpreble.data.teams.local.TeamDao
 import com.dpreble.data.times.local.TimeDao
 import dagger.Module
 import dagger.Provides
@@ -36,4 +37,7 @@ object DatabaseModule {
 
     @Provides
     fun provideTimeDao(database: FlyTimerDatabase): TimeDao = database.timeDao()
+
+    @Provides
+    fun provideTeamDao(database: FlyTimerDatabase): TeamDao = database.teamDao()
 }

@@ -282,7 +282,7 @@ private fun TimerScreenContentPreview() {
         TimerScreenContent(
             uiState = TimerScreenUiState(
                 athletes = listOf(Athlete(id = 1, name = "Jordan Wells")),
-                races = listOf(Race(id = 1, raceName = "20m Fly")),
+                races = listOf(Race(id = 1, lapsPerAthlete = 1, raceName = "20m Fly")),
                 selectedAthleteId = 1,
                 selectedRaceId = 1,
                 isRunning = true,
