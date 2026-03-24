@@ -20,6 +20,27 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    flavorDimensions += "env"
+
+    productFlavors {
+        create("dev") {
+            dimension = "env"
+            applicationIdSuffix = ".dev"
+            versionNameSuffix = "-dev"
+            resValue("string", "app_name", "FlyTimer Dev")
+        }
+        create("qa") {
+            dimension = "env"
+            applicationIdSuffix = ".qa"
+            versionNameSuffix = "-qa"
+            resValue("string", "app_name", "FlyTimer QA")
+        }
+        create("prod") {
+            dimension = "env"
+            resValue("string", "app_name", "FlyTimer")
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
