@@ -7,6 +7,13 @@ plugins {
     alias(libs.plugins.google.services)
 }
 
+val devBranchLabel = providers.environmentVariable("GITHUB_REF_NAME")
+    .orNull
+    ?.replace(Regex("[^A-Za-z0-9._-]+"), "-")
+    ?.trim('-')
+    ?.takeIf { it.isNotBlank() }
+    ?: "dev"
+
 android {
     namespace = "com.dpreble.flytimer"
     compileSdk = 35
@@ -16,7 +23,7 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 1
-        versionName = "1.0"
+        versionName = "0.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -26,7 +33,7 @@ android {
         create("dev") {
             dimension = "env"
             applicationIdSuffix = ".dev"
-            versionNameSuffix = "-dev"
+            versionNameSuffix = "-$devBranchLabel"
             resValue("string", "app_name", "FlyTimer Dev")
         }
         create("qa") {
