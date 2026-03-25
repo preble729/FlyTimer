@@ -5,7 +5,14 @@ plugins {
     alias(libs.plugins.dagger.hilt)
     alias(libs.plugins.ksp)
     alias(libs.plugins.google.services)
+    alias(libs.plugins.play.publisher)
 }
+
+val androidKeystorePath = providers.environmentVariable("ANDROID_KEYSTORE_PATH").orNull
+val androidKeystorePassword = providers.environmentVariable("ANDROID_KEYSTORE_PASSWORD").orNull
+val androidKeyAlias = providers.environmentVariable("ANDROID_KEY_ALIAS").orNull
+val androidKeyPassword = providers.environmentVariable("ANDROID_KEY_PASSWORD").orNull
+val playServiceAccountJsonPath = providers.environmentVariable("PLAY_SERVICE_ACCOUNT_JSON_PATH").orNull
 
 android {
     namespace = "com.dpreble.flytimer"
@@ -41,16 +48,6 @@ android {
         }
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -62,6 +59,32 @@ android {
     buildFeatures {
         compose = true
     }
+
+    signingConfigs {
+        create("release") {
+            storeFile = androidKeystorePath?.let { file(it) }
+            storePassword = androidKeystorePassword
+            keyAlias = androidKeyAlias
+            keyPassword = androidKeyPassword
+        }
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+}
+
+play {
+    track.set("internal")
+    defaultToAppBundles.set(true)
+    playServiceAccountJsonPath?.let { serviceAccountCredentials.set(file(it)) }
 }
 
 dependencies {

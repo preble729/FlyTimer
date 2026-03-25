@@ -1,0 +1,33 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x ./gradlew
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build debug variants
+        run: ./gradlew :app:assembleDevDebug :app:assembleQaDebug :app:assembleProdDebug
+
+      - name: Run unit tests
+        run: ./gradlew :data:testDebugUnitTest :di:testDebugUnitTest :domain:test
