@@ -26,8 +26,8 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Build all variants
-        run: ./gradlew :app:assemble
+      - name: Build debug variants
+        run: ./gradlew :app:assembleDevDebug :app:assembleQaDebug :app:assembleProdDebug
 
       - name: Run unit tests
         run: ./gradlew :data:testDebugUnitTest :di:testDebugUnitTest :domain:test
