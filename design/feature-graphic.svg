@@ -1,0 +1,17 @@
+<svg width="1024" height="500" viewBox="0 0 1024 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1024" height="500" fill="#F5F8FA"/>
+  <path d="M0 0H1024V208C860 278 684 302 470 276C246 213 0 298 0 298V0Z" fill="#EEF4FB"/>
+  <path d="M0 332C160 268 324 255 508 299C700 347 854 337 1024 258V500H0V332Z" fill="#E0E9F2"/>
+  <rect x="100" y="123" width="250" height="250" rx="64" fill="#0C1C26"/>
+  <rect x="123" y="146" width="205" height="205" rx="50" fill="url(#grad)"/>
+  <text x="225" y="286" text-anchor="middle" fill="#0C1C26" fill-opacity="0.18" font-family="'Segoe Script', cursive" font-size="114" font-weight="700">FT</text>
+  <text x="224" y="279" text-anchor="middle" fill="#FAFFFF" font-family="'Segoe Script', cursive" font-size="114" font-weight="700">FT</text>
+  <text x="420" y="230" fill="#0C1C26" font-family="Georgia, 'Times New Roman', serif" font-size="80" font-weight="700">FlyTimer</text>
+  <text x="423" y="296" fill="#3F5268" font-family="'Segoe UI', sans-serif" font-size="28" font-weight="600">Simple Track and Field Split Timing</text>
+  <defs>
+    <linearGradient id="grad" x1="123" y1="146" x2="328" y2="351" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#24437A"/>
+      <stop offset="1" stop-color="#162F5C"/>
+    </linearGradient>
+  </defs>
+</svg>
