@@ -1,32 +1,13 @@
 {
   "project_info": {
-    "project_number": "527637875355",
-    "project_id": "flytimer-f61fb",
-    "storage_bucket": "flytimer-f61fb.firebasestorage.app"
+    "project_number": "592812118686",
+    "project_id": "flytimer-c2761",
+    "storage_bucket": "flytimer-c2761.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:527637875355:android:97dcf5435d468517cc943e",
-        "android_client_info": {
-          "package_name": "com.dpreble.flytimer"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyATOIV0v7BqMOsNK0Gf0mH_CvG-o-PNuXE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:527637875355:android:d50c121d5f7d10a7cc943e",
+        "mobilesdk_app_id": "1:592812118686:android:525a57aeb308f4cf2b618f",
         "android_client_info": {
           "package_name": "com.dpreble.flytimer.dev"
         }
@@ -34,26 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyATOIV0v7BqMOsNK0Gf0mH_CvG-o-PNuXE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:527637875355:android:9556b31a175fb811cc943e",
-        "android_client_info": {
-          "package_name": "com.dpreble.flytimer.qa"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyATOIV0v7BqMOsNK0Gf0mH_CvG-o-PNuXE"
+          "current_key": "AIzaSyBOO_nc3V3IqE5LKSPXk-D8QoxHyAhRZx0"
         }
       ],
       "services": {
